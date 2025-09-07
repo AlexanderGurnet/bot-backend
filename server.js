@@ -19,7 +19,7 @@ app.use(limiter)
 
 // --- Telegram config
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN
-const ADMIN_IDS = process.env.TELEGRAM_CHAT_ID?.split(',').map((id) => id.trim()) || []
+const ADMIN_IDS = process.env.TELEGRAM_ADMIN_IDS.split(',').map((id) => id.trim()) || []
 
 if (!BOT_TOKEN || ADMIN_IDS.length === 0) {
   console.warn('⚠️ TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set in .env')
